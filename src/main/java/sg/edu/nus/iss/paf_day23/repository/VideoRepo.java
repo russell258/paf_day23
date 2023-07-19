@@ -21,6 +21,7 @@ public class VideoRepo {
     private String updateVideoSQL = "update video set title = ?, synopsis = ?, available_count = ? where id = ?";
 
     public List<Video> findAll(){
+        System.out.println(">>>>>>>>>>>>>>>> FIND ALL VIDEO GO THROUGH");
         return jdbc.query(findAllVideoSQL,BeanPropertyRowMapper.newInstance(Video.class));
     }
 
